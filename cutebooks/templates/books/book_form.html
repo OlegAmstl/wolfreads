@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Добавлени книги{% endblock %}
+{% block content %}
+<div class="container custom-container-form">
+    <form action="" method="post" enctype=multipart/form-data>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-primary" type="submit" value="Сохранить">
+    </form>
+</div>
+{% endblock %}

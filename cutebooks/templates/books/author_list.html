@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Все авторы{% endblock %}
+{% block content %}
+  <h1>Список авторов из базы данных</h1>
+  {% if author_list %}
+     <div class="cards">
+    {% for author in author_list.all %}
+    <div class="card card-custom" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ author.first_name }} {{ author.last_name }}
+        </h5>
+        <div>
+            <img src="{{ author.photo.url }}">
+        </div>
+        <p class="card-text">
+          <strong>Родился-</strong>{{ author.date_of_birth }}<br>
+          <strong>Умер-</strong>{{ author.date_of_death }}
+        </p>
+        <p>
+            {{ author.biography|truncatewords:20 }}
+        </p>
+        <a href="/author/update/{{ author.id }}" class="card-link">Изменить</a>
+        <a href="/author/delete/{{ author.id }}" class="card-link">Удалить</a>
+      </div>
+    </div>
+    {% endfor %}
+  {% else %}
+    <p>В базе нет авторов.</p>
+  {% endif %}
+{% endblock %}

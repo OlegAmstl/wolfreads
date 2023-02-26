@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}{{ book.title }}{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="wrapper-book-detail">
+    <div class="left-side">
+      <div class="left-side-img">
+        <img src="{{ book.cover.url }}" class="cover-book">
+      </div>
+      <a href="{% url 'users:favorite_add' book.id %}" class="btn btn-primary custom-btn">В избранное</a>
+      <a href="{% url 'users:add_read' book.id %}" class="btn btn-primary custom-btn">Прочитана</a>
+    </div>
+
+    <div class="right-side">
+      <h1>Название книги: {{ book.title }}</h1>
+    {% for author in book.author.all %}
+      <p><strong>Автор: </strong><a href="#">{{ author.first_name }} {{ author.last_name }}</a></p>
+    {% endfor %}
+      <p><strong>Жанр: </strong>{{ book.genre }}</p>
+    <p><strong>Описание: </strong>{{ book.description }}</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

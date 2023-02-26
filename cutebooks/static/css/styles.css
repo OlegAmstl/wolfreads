@@ -1,0 +1,61 @@
+.container-index {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.custom-container-form {
+    max-width: 40%;
+}
+
+.title-index {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.new_books {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-custom{
+    margin: 0 20px;
+}
+
+.wrapper-book-detail {
+    margin-top: 100px;
+    display: flex;
+}
+
+.left-side {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column
+    
+}
+
+.cover-book {
+    max-width: 400px;
+}
+
+.custom-btn {
+    width: 144px;
+    margin: 10px 10px 0 10px;
+}
+
+.books-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;    
+}
+
+.read-book-card {
+    margin-bottom: 40px;
+}
+
+.all-books {
+    display: flex;
+
+}

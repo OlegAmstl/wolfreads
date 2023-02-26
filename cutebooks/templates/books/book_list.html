@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Все книги{% endblock %}
+{% block content %}
+<div class="container container-index">
+  <h1>Список книг в базе данных.</h1>
+  {% if book_list %}
+  <div class="all-books">
+    {% for book in book_list %}
+    <div class="card card-custom" style="width: 18rem;">
+      <img src="{{ book.cover.url }}">
+      <div class="card-body">
+        <h5 class="card-title"><a href="{% url 'books:book_detail' book.pk %}">{{ book.title }}</a></h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Жанр: {{ book.genre }}</li>
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+    <p>В базе данных нет книг.</p>
+  {% endif %}
+</div>
+{% endblock %}
