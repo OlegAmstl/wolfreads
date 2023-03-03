@@ -55,7 +55,13 @@
     margin-bottom: 40px;
 }
 
+.card-author {
+    margin-bottom: 30px;
+}
+
 .all-books {
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
 }

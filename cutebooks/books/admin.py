@@ -31,7 +31,8 @@ class AuthorAdmin(admin.ModelAdmin):
     list_display = (
         'first_name',
         'last_name',
-        'photo'
+        'photo',
+        'date_of_birth'
     )
     list_filter = (
         'last_name',

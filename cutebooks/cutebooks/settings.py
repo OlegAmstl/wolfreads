@@ -4,6 +4,8 @@ import os
 
 LOGIN_REDIRECT_URL = '/'
 
+DATE_INPUT_FORMATS = ['%d-%m-%Y']
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 

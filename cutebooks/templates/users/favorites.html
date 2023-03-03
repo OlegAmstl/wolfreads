@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
+{% block title %}Закладки{% endblock %}
 {% block content %}
-{% for item in new %}
-    <p>{{ item.title }}</p>
+<div class="container container-index">
+{% for book in new %}
+    <div class="card read-book-card" style="width: 18rem;">
+      <img src="{{ book.cover.url }}">
+      <div class="card-body">
+        <h5 class="card-title"><a href="{% url 'books:book_detail' book.pk %}">{{ book.title }}</a></h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Жанр: {{ book.genre }}</li>
+      </ul>
+    </div>
 {% endfor %}
+</div>
 {% endblock %}

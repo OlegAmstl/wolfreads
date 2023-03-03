@@ -4,71 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="create app">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/wolfreads.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/books/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/books/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/books/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/books/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/books/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/books/migrations/0002_alter_author_options_alter_genre_options_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/books/migrations/0003_alter_author_biography.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/books/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/books/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/books/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/books/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/books/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/cutebooks/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/cutebooks/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/cutebooks/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/media/books/Nick_Perumov.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/media/books/authors/Nick_Perumov.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/media/books/authors/cris.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/media/books/authors/pastolit.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/media/books/authors/stefani-kacioppo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/media/books/books/1.00x-thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/media/books/books/black.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/media/books/books/black_LGo33Qp.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/media/books/books/django_pycharm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/media/books/books/one_liner.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/books/author_confirm_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/books/author_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/books/author_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/books/book_confirm_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/books/book_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/books/book_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/books/book_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/books/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/includes/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/users/favorites.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/users/logged_out.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/users/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/users/password_reset_complete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/users/password_reset_confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/users/password_reset_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/users/password_reset_email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/users/password_reset_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/users/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/users/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/users/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/users/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/users/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/users/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/users/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/users/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/users/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutebooks/users/views.py" afterDir="false" />
+    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="page all authors">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/books/author_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/books/author_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/users/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/users/favorites.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,10 +53,26 @@
       <option name="presentableId" value="Default" />
       <updated>1675320041454</updated>
     </task>
+    <task id="LOCAL-00001" summary="create app">
+      <created>1677403969417</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677403969417</updated>
+    </task>
+    <task id="LOCAL-00002" summary="page all authors">
+      <created>1677468442638</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677468442638</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create app" />
-    <option name="LAST_COMMIT_MESSAGE" value="create app" />
+    <MESSAGE value="page all authors" />
+    <option name="LAST_COMMIT_MESSAGE" value="page all authors" />
   </component>
 </project>
