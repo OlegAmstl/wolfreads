@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="page all authors">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="Fix bug with date of birth and date of death. Display of books added for reading. Display all authors on the site.">
+      <change afterPath="$PROJECT_DIR$/cutebooks/templates/books/author_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/books/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutebooks/templates/books/author_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/books/author_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/templates/users/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/users/favorites.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/books/book_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/books/book_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,12 +66,20 @@
       <option name="project" value="LOCAL" />
       <updated>1677468442638</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix bug with date of birth and date of death. Display of books added for reading. Display all authors on the site.">
+      <created>1677822463845</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677822463845</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create app" />
     <MESSAGE value="page all authors" />
-    <option name="LAST_COMMIT_MESSAGE" value="page all authors" />
+    <MESSAGE value="Fix bug with date of birth and date of death. Display of books added for reading. Display all authors on the site." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bug with date of birth and date of death. Display of books added for reading. Display all authors on the site." />
   </component>
 </project>

@@ -9,12 +9,12 @@
     <div class="card card-custom card-author" style="width: 18rem;">
       <img src="{{ author.photo.url }}">
       <div class="card-body">
-        <h5 class="card-title"><a href="#">{{ author.first_name }} {{ author.last_name }}</a></h5>
+        <h5 class="card-title"><a href="{% url 'books:author_detail' author.pk %}">{{ author.first_name }} {{ author.last_name }}</a></h5>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><strong>Дата рождения </strong>{{ author.date_of_birth }}</li>
         {% if author.date_of_death %}
-          <li class="list-group-item"><strong>Умер-</strong>{{ author.date_of_death }}</li>
+          <li class="list-group-item"><strong>Умер </strong>{{ author.date_of_death }}</li>
         {% endif %}
         <li class="list-group-item">{{ author.biography|truncatewords:20 }}</li>
       </ul>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ author.first_name }} {{ author.last_name }}
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="wrapper-book-detail">
+    <div class="left-side">
+      <div class="left-side-img">
+        <img src="{{ author.photo.url }}" class="cover-book">
+      </div>
+    </div>
+
+    <div class="right-side">
+      <h1>{{ author.first_name }} {{ author.last_name }}</h1>
+      {% if author.date_of_death %}
+        <p class="list-group-item"><strong>Родился </strong>{{ author.date_of_birth }}</p>
+      {% endif %}
+      {% if author.date_of_death %}
+        <p class="list-group-item"><strong>Умер </strong>{{ author.date_of_death }}</p>
+      {% endif %}
+      <div>
+          <h3>Биография.</h3>
+          <p>{{ author.biography }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -52,6 +52,14 @@ class AuthorListView(ListView):
     model = Author
 
 
+class AuthorDetailView(DetailView):
+    """
+    Персональная страница автора.
+    """
+
+    model = Author
+
+
 class BookCreate(edit.CreateView):
     """
     Добавление новой кнги в базу данных.
