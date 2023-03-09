@@ -3,7 +3,7 @@ from django.contrib.auth.views import LogoutView, LoginView,\
     PasswordResetConfirmView, PasswordResetCompleteView
 from django.urls import path
 
-from .views import SignUp, favorite_add, favorites_list, profile, add_read
+from .views import SignUp, profile
 
 app_name = 'users'
 
@@ -27,9 +27,8 @@ urlpatterns = [
         template_name='users/password_reset_complete.html'),
          name='password_reset_complete'),
 
-    path('fav/<int:id>/', favorite_add, name='favorite_add'),
-    path('favorites/', favorites_list, name='favorites_all'),
-    path('read_add/<int:id>/', add_read, name='add_read'),
+
+
     path('profile/<str:username>/', profile,
          name='user_profile')
 ]

@@ -4,6 +4,8 @@ from django.urls import reverse_lazy
 from django.views.generic import edit, ListView, DetailView
 from django.contrib.auth.decorators import login_required
 
+from datetime import datetime
+
 from .models import Book, Author
 
 
@@ -110,3 +112,43 @@ class BookDetailView(DetailView):
     '''
 
     model = Book
+
+
+@login_required
+def favorite_add(request, id):
+    """
+    Отображение книг, добавленных в избранное.
+    :param request:
+    :param id: id книги.
+    :return:
+    """
+    book = get_object_or_404(Book, id=id)
+    if book.favorites.filter(id=request.user.id).exists():
+        book.favorites.remove(request.user)
+    else:
+        book.favorites.add(request.user)
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+
+@login_required
+def favorites_list(request):
+    fav_books = Book.objects.filter(favorites=request.user)
+    return render(request, 'books/favorites.html', {'fav_books': fav_books})
+
+
+@login_required
+def add_read(request, id):
+    """
+    Отображение прочитанных книг.
+    :param request:
+    :param id: id книги.
+    :return:
+    """
+    book = get_object_or_404(Book, id=id)
+    if book.read.filter(id=request.user.id).exists():
+        book.read.remove(request.user)
+    else:
+        book.read.add(request.user)
+        book.date_read = datetime.now()
+        book.save()
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
