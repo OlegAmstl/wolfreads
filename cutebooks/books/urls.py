@@ -14,7 +14,8 @@ from .views import (
     BookDetailView,
     favorite_add,
     favorites_list,
-    add_read
+    add_read,
+    delete_book_from_favorites
     )
 
 app_name = 'books'
@@ -38,6 +39,7 @@ urlpatterns = [
     re_path(r'^book/(?P<pk>\d+)$', BookDetailView.as_view(),
             name='book_detail'),
     path('fav/<int:id>/', favorite_add, name='favorite_add'),
+    path('fav_del/<int:id>/', delete_book_from_favorites, name='favorite_delete'),
     path('favorites/', favorites_list, name='favorites_all'),
     path('read_add/<int:id>/', add_read, name='add_read'),
 ]

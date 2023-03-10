@@ -9,7 +9,7 @@
         <h5 class="card-title"><a href="{% url 'books:book_detail' book.pk %}">{{ book.title }}</a></h5>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Жанр: {{ book.genre }}</li>
+        <li class="list-group-item"><a href="{% url 'books:favorite_delete' book.id %}" class="btn btn-primary custom-btn">Удалить</a></li>
       </ul>
     </div>
 {% endfor %}

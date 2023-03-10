@@ -152,3 +152,15 @@ def add_read(request, id):
         book.date_read = datetime.now()
         book.save()
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+
+def delete_book_from_favorites(request, id):
+    """
+    Удаление книги из списка Хочу прочитать.
+    :param request:
+    :return:
+    """
+    book = get_object_or_404(Book, id=id)
+    if book.favorites.filter(id=request.user.id).exists():
+        book.favorites.remove(request.user)
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])

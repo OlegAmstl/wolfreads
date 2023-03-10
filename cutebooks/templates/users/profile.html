@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}{{ user.username }}{% endblock %}
 {% block content %}
+{% load avatar_tags %}
 <div class="container">
+    <div>
+        <div>{% avatar user 350 350 class="img-circle img-responsive" %}</div>
+        <a href="{% url 'avatar_change' %}">Change your avatar</a>
+    </div>
     <h2>{{ user.username }}</h2>
     <p>Прочитанных книг: {{ num_read }}</p>
+    <p><a class="btn btn-primary" href="{% url 'books:favorites_all' %}">Избранное</a></p>
     <div class="books-reads">
         <h2>Вы прочитали:</h2>
         <div class="books-list">

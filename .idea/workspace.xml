@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="Added author's page">
+    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="Fixed bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutebooks/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutebooks/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/templates/books/book_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/books/book_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/cutebooks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/cutebooks/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/books/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/books/favorites.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutebooks/templates/includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/includes/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/templates/users/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/books/favorites.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/users/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,14 +88,33 @@
       <option name="project" value="LOCAL" />
       <updated>1677990203746</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed bugs">
+      <created>1678331380014</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678331380014</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create app" />
     <MESSAGE value="page all authors" />
     <MESSAGE value="Fix bug with date of birth and date of death. Display of books added for reading. Display all authors on the site." />
     <MESSAGE value="Added author's page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added author's page" />
+    <MESSAGE value="Fixed bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs" />
   </component>
 </project>
