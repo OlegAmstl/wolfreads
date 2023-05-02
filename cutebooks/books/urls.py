@@ -15,7 +15,8 @@ from .views import (
     favorite_add,
     favorites_list,
     add_read,
-    delete_book_from_favorites
+    delete_book_from_favorites,
+    challenge_create,
     )
 
 app_name = 'books'
@@ -42,4 +43,5 @@ urlpatterns = [
     path('fav_del/<int:id>/', delete_book_from_favorites, name='favorite_delete'),
     path('favorites/', favorites_list, name='favorites_all'),
     path('read_add/<int:id>/', add_read, name='add_read'),
+    path('challenge/create/', challenge_create, name='challenge_create'),
 ]

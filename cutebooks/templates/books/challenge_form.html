@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Челлендж{% endblock %}
+{% block content %}
+<div class="container custom-container-form">
+    <h3>Укажите сколько книг хотие прочитать за этот год</h3>
+    <form action="" method="post" enctype=multipart/form-data>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-primary" type="submit" value="Сохранить">
+    </form>
+</div>
+{% endblock %}

@@ -134,3 +134,19 @@ class Book(models.Model):
     class Meta:
         verbose_name = 'Книга'
         verbose_name_plural = 'Книги'
+
+
+class Challenge(models.Model):
+    """
+    Модель создания челенджа на
+    прочтение определенного количества книг.
+    """
+
+    num_books = models.IntegerField(verbose_name='Количество книг на год')
+    year = models.DateField(auto_now_add=True)
+    done = models.BooleanField(default=True)
+    user = models.ForeignKey(User,
+                             on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.num_books}'

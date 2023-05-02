@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Book, Author, Genre
+from .models import Book, Author, Genre, Challenge
 
 
 @admin.register(Book)
@@ -48,3 +48,15 @@ class GenreAdmin(admin.ModelAdmin):
     list_display = (
         'name',
     )
+
+
+@admin.register(Challenge)
+class ChallengeAdmin(admin.ModelAdmin):
+    """
+    Регистрация модели Challenge для панели администратора.
+    """
+
+    list_display = [
+        'num_books',
+        'user'
+    ]

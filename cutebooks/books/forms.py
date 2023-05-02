@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Book, Author
+from .models import Book, Author, Challenge
 
 
 class AuthorForm(forms.ModelForm):
@@ -10,6 +10,7 @@ class AuthorForm(forms.ModelForm):
 
     class Meta:
         model = Author
+        fields = '__all__'
 
 
 class BookForm(forms.ModelForm):
@@ -25,4 +26,12 @@ class BookForm(forms.ModelForm):
 
     class Meta:
         model = Book
+        fields = '__all__'
+
+
+class ChallengeForm(forms.ModelForm):
+
+    class Meta:
+        model = Challenge
+        fields = ['num_books',]
 

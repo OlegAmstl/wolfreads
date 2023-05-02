@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import edit, ListView, DetailView
 from django.contrib.auth.decorators import login_required
@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
 from .models import Book, Author
+from .forms import ChallengeForm
 
 
 def index(request):
@@ -164,3 +165,39 @@ def delete_book_from_favorites(request, id):
     if book.favorites.filter(id=request.user.id).exists():
         book.favorites.remove(request.user)
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+
+@login_required
+def challenge_create(request):
+    """
+    Создание челенджа.
+    :param request:
+    :return:
+    """
+    template = 'books/challenge_form.html'
+    form = ChallengeForm(request.POST or None,
+                         files=request.FILES or None)
+    if form.is_valid():
+        challenge = form.save(commit=False)
+        challenge.user = request.user
+        form.save()
+        return redirect('users:user_profile', request.user)
+    else:
+        context = {
+            'form': form
+        }
+        return render(request, template, context=context)
+
+
+# @login_required
+# def progress_challenge(request):
+#     """
+#     Отображение на странице прогресс челленджа.
+#     :param request:
+#     :return:
+#     """
+#     template = 'includes/challenge_progress.html'
+#     books = Book.objects.filter(read=request.user).filter(date_read__year='2023').count()
+#     challenge = Challenge.object.filter(user=request.user)
+#     result = challenge.num_books - int(books)
+#     return render(request, template, {'result': result})
