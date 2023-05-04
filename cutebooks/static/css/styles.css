@@ -7,19 +7,22 @@
 }
 
 .title-index {
+    font-family: 'Lobster', cursive;
+    font-size: 3.0em;
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
-    font-weight: bold;
 }
 
 .new_books {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
 }
 
 .card-custom{
     margin: 0 20px;
+    
 }
 
 .wrapper-book-detail {
@@ -63,5 +66,8 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
 
+.header-logo {
+    width: 100px;
 }

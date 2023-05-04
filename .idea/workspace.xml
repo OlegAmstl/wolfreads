@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="Fixed bugs">
+    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="Create challenges">
+      <change beforePath="$PROJECT_DIR$/.idea/wolfreads.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wolfreads.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/cutebooks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/cutebooks/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutebooks/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/templates/books/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/books/favorites.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutebooks/templates/includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/includes/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/users/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -38,14 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/amstl/Dev/wolfreads&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/amstl/Dev/wolfreads",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cutebooks/templates/books" />
@@ -95,7 +95,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678331380014</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Create avatars">
+      <created>1678424588447</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678424588447</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Create challenges">
+      <created>1683024162892</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683024162892</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,6 +129,8 @@
     <MESSAGE value="Fix bug with date of birth and date of death. Display of books added for reading. Display all authors on the site." />
     <MESSAGE value="Added author's page" />
     <MESSAGE value="Fixed bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs" />
+    <MESSAGE value="Create avatars" />
+    <MESSAGE value="Create challenges" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create challenges" />
   </component>
 </project>

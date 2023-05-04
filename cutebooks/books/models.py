@@ -85,7 +85,7 @@ class Book(models.Model):
     author = models.ManyToManyField(
         Author,
         verbose_name='Автор книги',
-        help_text='Укажите автора книги'
+        help_text='Укажите автора/авторов книги'
     )
     description = models.TextField(
         verbose_name="Описание книги",
