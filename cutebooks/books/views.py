@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 from datetime import datetime
 
-from .models import Book, Author
+from .models import Book
 from .forms import ChallengeForm
 
 
@@ -16,51 +16,6 @@ def index(request):
         'books': books,
     }
     return render(request, 'books/index.html', context=context)
-
-
-class AuthorCreate(edit.CreateView):
-    """
-    Добавления нового автора в базу данных.
-    """
-
-    model = Author
-    fields = '__all__'
-    success_url = reverse_lazy('books:authors')
-
-
-class AuthorUpdate(edit.UpdateView):
-    '''
-    Редактирование информации о авторе.
-    '''
-
-    model = Author
-    fields = '__all__'
-    success_url = reverse_lazy('books:authors')
-
-
-class AuthorDelete(edit.DeleteView):
-    '''
-    Удаление автора.
-    '''
-
-    model = Author
-    success_url = reverse_lazy('books:authors')
-
-
-class AuthorListView(ListView):
-    """
-    Отображение авторов.
-    """
-
-    model = Author
-
-
-class AuthorDetailView(DetailView):
-    """
-    Персональная страница автора.
-    """
-
-    model = Author
 
 
 class BookCreate(edit.CreateView):
@@ -187,17 +142,3 @@ def challenge_create(request):
             'form': form
         }
         return render(request, template, context=context)
-
-
-# @login_required
-# def progress_challenge(request):
-#     """
-#     Отображение на странице прогресс челленджа.
-#     :param request:
-#     :return:
-#     """
-#     template = 'includes/challenge_progress.html'
-#     books = Book.objects.filter(read=request.user).filter(date_read__year='2023').count()
-#     challenge = Challenge.object.filter(user=request.user)
-#     result = challenge.num_books - int(books)
-#     return render(request, template, {'result': result})

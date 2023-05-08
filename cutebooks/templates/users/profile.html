@@ -9,8 +9,12 @@
     </div>
     <h2>{{ user.username }}</h2>
     <div class="challenge">
-        {% if challenge != None %}
-        <p>Выполнение челленджа: прочитано {{ read_books_of_year }} из {{ challenge.num_books }}</p>
+        {% if challenge != False %}
+        <p>Выполнение челленджа - {{ challenge_percent }}%</p>
+        <p>Прочитано книг {{ read_books_of_year }} из {{ challenge.num_books }}</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{ challenge_percent }}%" aria-valuenow="{{ challenge_percent }}" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
         {% else %}
         <p><a class="btn btn-primary" href="{% url 'books:challenge_create' %}">Cоздать челлендж</a></p>
         {% endif %}

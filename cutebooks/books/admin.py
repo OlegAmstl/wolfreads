@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Book, Author, Genre, Challenge
+from .models import Book, Genre, Challenge
 
 
 @admin.register(Book)
@@ -19,23 +19,6 @@ class BookAdmin(admin.ModelAdmin):
     list_filter = (
         'genre',
         'pub_date'
-    )
-
-
-@admin.register(Author)
-class AuthorAdmin(admin.ModelAdmin):
-    """
-    Регистрация модели Author для панели администратора.
-    """
-
-    list_display = (
-        'first_name',
-        'last_name',
-        'photo',
-        'date_of_birth'
-    )
-    list_filter = (
-        'last_name',
     )
 
 

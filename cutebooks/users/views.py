@@ -34,11 +34,17 @@ def profile(request, username):
     user = request.user
     read_books = Book.objects.filter(read=request.user)
     read_books_of_year = read_books.filter(date_read__year='2023').count()
-    challenge = Challenge.objects.get(user=user)
+    if Challenge.objects.filter(user=user).exists():
+        challenge = Challenge.objects.get(user=user)
+        challenge_in_percent = (int(read_books_of_year) * 100) / int(challenge.num_books)
+    else:
+        challenge = False
+        challenge_in_percent = None
     context = {
         'user': user,
         'read_books': read_books,
         'read_books_of_year': read_books_of_year,
-        'challenge': challenge
+        'challenge': challenge,
+        'challenge_percent': int(challenge_in_percent)
     }
     return render(request, template, context=context)

@@ -13,9 +13,7 @@
 
     <div class="right-side">
       <h1>Название книги: {{ book.title }}</h1>
-    {% for author in book.author.all %}
-      <p><strong>Автор: </strong><a href="#">{{ author.first_name }} {{ author.last_name }}</a></p>
-    {% endfor %}
+      <p><strong>Автор: </strong>{{ book.author }}</p>
       <p><strong>Жанр: </strong>{{ book.genre }}</p>
     <p><strong>Описание: </strong>{{ book.description }}</p>
     </div>

@@ -23,55 +23,6 @@ class Genre(models.Model):
         verbose_name_plural = 'Жанры'
 
 
-class Author(models.Model):
-    """
-    Модель автора книги.
-    """
-
-    first_name = models.CharField(
-        max_length=100,
-        help_text='Введите имя автора',
-        verbose_name='Имя автора'
-    )
-    last_name = models.CharField(
-        max_length=100,
-        help_text='Введите фамилию автора',
-        verbose_name='Фамилия автора'
-    )
-    date_of_birth = models.DateField(
-        help_text='Введите дату рождения автора',
-        verbose_name='Дата рождения автора',
-        null=True,
-        blank=True
-    )
-    date_of_death = models.DateField(
-        help_text='Введите дату смерти автора',
-        verbose_name='Дата смерти автора',
-        null=True,
-        blank=True
-    )
-    photo = models.ImageField(
-        verbose_name='Фото автора',
-        help_text='Добавьте фото автора',
-        null=True,
-        blank=True,
-        upload_to='books/authors/'
-    )
-    biography = models.TextField(
-        max_length=10000,
-        verbose_name='Биография автора',
-        help_text='Укажите биографию автора',
-        blank=True
-    )
-
-    def __str__(self):
-        return self.last_name
-
-    class Meta:
-        verbose_name = 'Автор'
-        verbose_name_plural = 'Авторы'
-
-
 class Book(models.Model):
     """
     Модель книги.
@@ -82,8 +33,8 @@ class Book(models.Model):
         verbose_name="Название книги",
         help_text='Укажите название книги'
     )
-    author = models.ManyToManyField(
-        Author,
+    author = models.CharField(
+        max_length=250,
         verbose_name='Автор книги',
         help_text='Укажите автора/авторов книги'
     )

@@ -4,12 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="Create challenges">
-      <change beforePath="$PROJECT_DIR$/.idea/wolfreads.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wolfreads.iml" afterDir="false" />
+    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="design main page">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/migrations/0002_alter_author_options_alter_genre_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/migrations/0003_alter_author_biography.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/migrations/0004_book_read.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/books/author_confirm_delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/books/author_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/books/author_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/books/author_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/books/book_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/books/book_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutebooks/templates/includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/includes/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,17 +50,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/amstl/Dev/wolfreads",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/amstl/Dev/wolfreads&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cutebooks/templates/books" />
@@ -109,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683024162892</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="design main page">
+      <created>1683181316427</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683181316427</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +153,7 @@
     <MESSAGE value="Fixed bugs" />
     <MESSAGE value="Create avatars" />
     <MESSAGE value="Create challenges" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create challenges" />
+    <MESSAGE value="design main page" />
+    <option name="LAST_COMMIT_MESSAGE" value="design main page" />
   </component>
 </project>
