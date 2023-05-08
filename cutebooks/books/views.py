@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
 from .models import Book
-from .forms import ChallengeForm
+from .forms import ChallengeForm, RatingForm
 
 
 def index(request):
@@ -101,10 +101,10 @@ def add_read(request, id):
     :return:
     """
     book = get_object_or_404(Book, id=id)
-    if book.read.filter(id=request.user.id).exists():
-        book.read.remove(request.user)
+    if book.read_user.filter(id=request.user.id).exists():
+        book.read_user.remove(request.user)
     else:
-        book.read.add(request.user)
+        book.read_user.add(request.user)
         book.date_read = datetime.now()
         book.save()
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
@@ -142,3 +142,20 @@ def challenge_create(request):
             'form': form
         }
         return render(request, template, context=context)
+
+
+def rating_book(request, id):
+    book = get_object_or_404(Book, id=id)
+    form = RatingForm(request.POST or None,
+                      files=request.FILES or None)
+    if form.is_valid():
+        rating = form.save(commit=False)
+        rating.user = request.user
+        rating.book = book
+        form.save()
+        return redirect('users:user_profile', request.user)
+    else:
+        context = {
+            'form': form
+        }
+    return render(request, 'books/rating_book_form.html', context=context)

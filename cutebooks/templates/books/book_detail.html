@@ -8,7 +8,7 @@
         <img src="{{ book.cover.url }}" class="cover-book">
       </div>
       <a href="{% url 'books:favorite_add' book.id %}" class="btn btn-primary custom-btn">В избранное</a>
-      <a href="{% url 'books:add_read' book.id %}" class="btn btn-primary custom-btn">Прочитана</a>
+      <a href="{% url 'books:rating_book' book.id %}" class="btn btn-primary custom-btn">Прочитана</a>
     </div>
 
     <div class="right-side">

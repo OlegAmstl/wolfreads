@@ -1,5 +1,8 @@
 cutebooks/media/
 cutebooks/books/migrations/
 cutebooks/static/admin/
-.idea
+.idea/
+venv/
 todo.md
+db.sqlite3
+workspace.xml

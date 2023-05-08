@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 User = get_user_model()
 
@@ -70,14 +71,6 @@ class Book(models.Model):
         default=None,
         blank=True
     )
-    read = models.ManyToManyField(
-        User,
-        related_name='read',
-        default=None,
-        blank=True
-    )
-    date_read = models.DateField(blank=True,
-                                 null=True)
 
     def __str__(self):
         return self.title
@@ -101,3 +94,22 @@ class Challenge(models.Model):
 
     def __str__(self):
         return f'{self.num_books}'
+
+
+class RatingBook(models.Model):
+    '''
+    Рейтинг книги и добавление ее в прочитанные.
+    '''
+
+    book = models.ForeignKey(
+        Book,
+        on_delete=models.CASCADE
+    )
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE
+    )
+    score = models.IntegerField(
+        validators=[MaxValueValidator(5), MinValueValidator(1)]
+    )
+    date_read = models.DateField(auto_now_add=True)

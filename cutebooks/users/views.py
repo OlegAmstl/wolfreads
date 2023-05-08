@@ -3,11 +3,10 @@ from django.views.generic import CreateView
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
-from django.shortcuts import get_object_or_404
 
 from .forms import CreateUserForm
 
-from books.models import Book, Challenge
+from books.models import Challenge, RatingBook
 
 User = get_user_model()
 
@@ -32,11 +31,11 @@ def profile(request, username):
     """
     template = 'users/profile.html'
     user = request.user
-    read_books = Book.objects.filter(read=request.user)
+    read_books = RatingBook.objects.filter(user=user)
     read_books_of_year = read_books.filter(date_read__year='2023').count()
     if Challenge.objects.filter(user=user).exists():
         challenge = Challenge.objects.get(user=user)
-        challenge_in_percent = (int(read_books_of_year) * 100) / int(challenge.num_books)
+        challenge_in_percent = int(int(read_books_of_year) * 100) / int(challenge.num_books)
     else:
         challenge = False
         challenge_in_percent = None
@@ -45,6 +44,6 @@ def profile(request, username):
         'read_books': read_books,
         'read_books_of_year': read_books_of_year,
         'challenge': challenge,
-        'challenge_percent': int(challenge_in_percent)
+        'challenge_percent': challenge_in_percent
     }
     return render(request, template, context=context)

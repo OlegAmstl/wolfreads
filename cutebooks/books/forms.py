@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Book, Challenge
+from .models import Book, Challenge, RatingBook
 
 
 class BookForm(forms.ModelForm):
@@ -17,3 +17,9 @@ class ChallengeForm(forms.ModelForm):
     class Meta:
         model = Challenge
         fields = ['num_books', ]
+
+
+class RatingForm(forms.ModelForm):
+    class Meta:
+        model = RatingBook
+        fields = ['score',]
