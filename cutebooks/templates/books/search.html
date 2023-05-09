@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Поиск{% endblock %}
+{% block content %}
+    <h2>
+        {% if books %}
+        <span class="text-muted">Результат по </span>{{ request.GET.book_title }}
+        {% else %}
+        <span>Книга по данному запросу не найдена.</span>
+        {% endif %}
+    </h2>
+    {% for book in books %}
+    <div class="card card-custom" style="width: 18rem;">
+      <img src="{{ book.cover.url }}">
+      <div class="card-body">
+        <h5 class="card-title"><a href="{% url 'books:book_detail' book.pk %}">{{ book.title }}</a></h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Жанр: {{ book.genre }}</li>
+      </ul>
+    </div>
+    {% endfor %}
+{% endblock %}

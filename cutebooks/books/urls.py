@@ -7,6 +7,7 @@ from .views import (
     BookDelete,
     BookListView,
     BookDetailView,
+    BookSearchView,
     favorite_add,
     favorites_list,
     add_read,
@@ -32,5 +33,6 @@ urlpatterns = [
     path('favorites/', favorites_list, name='favorites_all'),
     path('read_add/<int:id>/', add_read, name='add_read'),
     path('challenge/create/', challenge_create, name='challenge_create'),
-    path('rating/<int:id>/', rating_book, name='rating_book')
+    path('rating/<int:id>/', rating_book, name='rating_book'),
+    path('books/search/', BookSearchView.as_view(), name='book_search')
 ]

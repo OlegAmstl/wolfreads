@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
 from .models import Book
-from .forms import ChallengeForm, RatingForm
+from .forms import ChallengeForm, RatingForm, BookSearchForm
 
 
 def index(request):
@@ -145,6 +145,12 @@ def challenge_create(request):
 
 
 def rating_book(request, id):
+    '''
+    Оценка книги по пятибальной шкале.
+    :param request:
+    :param id:
+    :return:
+    '''
     book = get_object_or_404(Book, id=id)
     form = RatingForm(request.POST or None,
                       files=request.FILES or None)
@@ -159,3 +165,23 @@ def rating_book(request, id):
             'form': form
         }
     return render(request, 'books/rating_book_form.html', context=context)
+
+
+class BookSearchView(ListView):
+    '''
+    Отображение результатов поиска книги по названию.
+    '''
+
+    model = Book
+    context_object_name = 'books'
+    form_class = BookSearchForm
+
+    def get_queryset(self):
+        form = self.form_class(self.request.GET)
+        if form.is_valid():
+            books = Book.objects.filter(title__icontains=form.cleaned_data['book_title'])
+            return books
+        return []
+
+    def get_template_names(self):
+        return 'books/search.html'

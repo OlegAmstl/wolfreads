@@ -2,6 +2,9 @@
 {% block content %}
 {% load static %}
 <main class="container container-index">
+    <div>
+        {% include 'includes/search-bar.html' %}
+    </div>
   <h3 class="title-index">Последние добавления на сайт</h3>
   <div class="new_books">
     {% for book in books %}
