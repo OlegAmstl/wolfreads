@@ -14,7 +14,7 @@
         {% if user.is_authenticated %}
 
         <li class="nav-item">
-          <a class="nav-link active border border-info rounded-pill" aria-current="page" href="{% url 'users:user_profile' user.username %}">{{ user.username }}</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'users:user_profile' user.username %}">{{ user.username }}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'users:logout' %}">ВЫЙТЕ</a>

@@ -1,4 +1,5 @@
 from django.http import HttpResponseRedirect
+from django.conf import settings
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import edit, ListView, DetailView
@@ -60,6 +61,7 @@ class BookListView(ListView):
     """
 
     model = Book
+    paginate_by = settings.NUM_BOOKS
 
 
 class BookDetailView(DetailView):
@@ -175,6 +177,7 @@ class BookSearchView(ListView):
     model = Book
     context_object_name = 'books'
     form_class = BookSearchForm
+    paginate_by = settings.NUM_BOOKS
 
     def get_queryset(self):
         form = self.form_class(self.request.GET)

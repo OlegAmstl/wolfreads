@@ -16,12 +16,13 @@
 
 .new_books {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: row;
 }
 
 .card-custom{
-    margin: 0 20px;
+    margin: 10px 20px;
     
 }
 
@@ -71,3 +72,4 @@
 .header-logo {
     width: 100px;
 }
+
