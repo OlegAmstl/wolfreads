@@ -73,3 +73,38 @@
     width: 100px;
 }
 
+.profile-header {
+    display: flex;
+}
+
+.profile-avatar {
+    margin-right: 40px;
+}
+
+.change-avatar {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.img-circle {
+    border-radius: 5%;
+}
+
+.profile-info-allread {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.want-read {
+    margin-top: 20px;
+}
+
+.books-read {
+    padding-top: 50px;
+}
+
+.books-list-header {
+    margin: 20px auto;
+    text-align: center;
+}
+

@@ -34,11 +34,12 @@ def profile(request, username):
     template = 'users/profile.html'
     user = request.user
     read_books = RatingBook.objects.filter(user=user)
+    read_books_all = RatingBook.objects.filter(user=user).count()
     read_books_of_year = read_books.filter(date_read__year='2023').count()
 
     if Challenge.objects.filter(user=user).exists():
         challenge = Challenge.objects.get(user=user)
-        challenge_in_percent = int(int(read_books_of_year) * 100) / int(challenge.num_books)
+        challenge_in_percent = int((int(read_books_of_year) * 100) / int(challenge.num_books))
     else:
         challenge = False
         challenge_in_percent = None
@@ -50,6 +51,7 @@ def profile(request, username):
         'user': user,
         'read_books': read_books,
         'read_books_of_year': read_books_of_year,
+        'read_books_all': read_books_all,
         'challenge': challenge,
         'challenge_percent': challenge_in_percent,
         'page_obj': page_obj

@@ -3,12 +3,15 @@ from pathlib import Path
 import os
 
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 NUM_BOOKS = 15
+
+AVATAR_CHANGE_TEMPLATE = 'users/ava_change.html'
 
 
 SECRET_KEY = 'django-insecure-txczybjjqt9nw^4(ez51+j2etmta@+%3wx-+xoajnp@pi@q6o%'
