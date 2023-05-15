@@ -1,14 +1,14 @@
-from django.shortcuts import render
 from django.conf import settings
-from django.core.paginator import Paginator
-from django.views.generic import CreateView
-from django.urls import reverse_lazy
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
-
-from .forms import CreateUserForm
+from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
+from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.views.generic import CreateView
 
 from books.models import Challenge, RatingBook
+
+from .forms import CreateUserForm
 
 User = get_user_model()
 

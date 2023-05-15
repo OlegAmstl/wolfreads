@@ -1,6 +1,9 @@
+import os
 from pathlib import Path
 
-import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -14,7 +17,7 @@ NUM_BOOKS = 15
 AVATAR_CHANGE_TEMPLATE = 'users/ava_change.html'
 
 
-SECRET_KEY = 'django-insecure-txczybjjqt9nw^4(ez51+j2etmta@+%3wx-+xoajnp@pi@q6o%'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
@@ -68,19 +71,22 @@ TEMPLATES = [
 WSGI_APPLICATION = 'cutebooks.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': os.environ.get('DB_HOST'),
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASS'),
     }
 }
-
-
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {

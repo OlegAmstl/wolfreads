@@ -1,20 +1,9 @@
 from django.urls import path, re_path
 
-from .views import (
-    index,
-    BookCreate,
-    BookUpdate,
-    BookDelete,
-    BookListView,
-    BookDetailView,
-    BookSearchView,
-    favorite_add,
-    favorites_list,
-    add_read,
-    delete_book_from_favorites,
-    challenge_create,
-    rating_book
-    )
+from .views import (BookCreate, BookDelete, BookDetailView, BookListView,
+                    BookSearchView, BookUpdate, add_read, challenge_create,
+                    delete_book_from_favorites, favorite_add, favorites_list,
+                    index, rating_book)
 
 app_name = 'books'
 

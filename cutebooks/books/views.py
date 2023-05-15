@@ -1,14 +1,14 @@
-from django.http import HttpResponseRedirect
-from django.conf import settings
-from django.shortcuts import render, get_object_or_404, redirect
-from django.urls import reverse_lazy
-from django.views.generic import edit, ListView, DetailView
-from django.contrib.auth.decorators import login_required
-
 from datetime import datetime
 
+from django.conf import settings
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse_lazy
+from django.views.generic import DetailView, ListView, edit
+
+from .forms import BookSearchForm, ChallengeForm, RatingForm
 from .models import Book
-from .forms import ChallengeForm, RatingForm, BookSearchForm
 
 
 def index(request):
