@@ -47,7 +47,7 @@ class Book(models.Model):
         verbose_name="Обложка книги",
         help_text='Добавьте обложку книги',
         upload_to="books/books/",
-        blank=True
+        blank=False
     )
     genre = models.ForeignKey(
         Genre,

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}Поиск{% endblock %}
 {% block content %}
+<div class="container">
     <h2>
         {% if books %}
         <span class="text-muted">Результат по </span>{{ request.GET.book_title }}
@@ -20,4 +21,6 @@
     </div>
     {% endfor %}
     {% include 'includes/paginator.html' %}
+</div>
+
 {% endblock %}
