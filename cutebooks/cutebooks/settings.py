@@ -12,8 +12,10 @@ DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Количество отображаемых книг для пагинатора
 NUM_BOOKS = 15
 
+# Замена стандартоного шаблона модуля django-avatar
 AVATAR_CHANGE_TEMPLATE = 'users/ava_change.html'
 
 
@@ -34,10 +36,12 @@ INSTALLED_APPS = [
 
     'books.apps.BooksConfig',
     'users.apps.UsersConfig',
+    'api.apps.ApiConfig',
 
     'crispy_forms',
     'crispy_bootstrap5',
-    'avatar'
+    'avatar',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -77,6 +81,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# Postgresql предпочтительно использовать при размещении проекта на удаленном сервере
 
 # DATABASES = {
 #     'default': {
