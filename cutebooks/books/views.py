@@ -12,6 +12,9 @@ from .models import Book
 
 
 def index(request):
+    """
+    На главной странице отображаются последние добавленные на сайт 4 книги.
+    """
     books = Book.objects.order_by('-add_date')[:4]
     context = {
         'books': books,
@@ -37,9 +40,9 @@ class BookCreate(edit.CreateView):
 
 
 class BookUpdate(edit.UpdateView):
-    '''
+    """
     Редактирование информации о книге.
-    '''
+    """
 
     model = Book
     fields = '__all__'
@@ -47,9 +50,9 @@ class BookUpdate(edit.UpdateView):
 
 
 class BookDelete(edit.DeleteView):
-    '''
+    """
     Удаление униги из базы данных.
-    '''
+    """
 
     model = Book
     success_url = reverse_lazy('books:books')
@@ -65,9 +68,9 @@ class BookListView(ListView):
 
 
 class BookDetailView(DetailView):
-    '''
+    """
     Отображает информацию по выбранной книге.
-    '''
+    """
 
     model = Book
 
