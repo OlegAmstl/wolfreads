@@ -39,25 +39,6 @@ class BookCreate(edit.CreateView):
     success_url = reverse_lazy('books:books')
 
 
-class BookUpdate(edit.UpdateView):
-    """
-    Редактирование информации о книге.
-    """
-
-    model = Book
-    fields = '__all__'
-    success_url = reverse_lazy('books:books')
-
-
-class BookDelete(edit.DeleteView):
-    """
-    Удаление униги из базы данных.
-    """
-
-    model = Book
-    success_url = reverse_lazy('books:books')
-
-
 class BookListView(ListView):
     """
     Отображение книг.

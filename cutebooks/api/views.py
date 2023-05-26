@@ -2,8 +2,8 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework import mixins
 
-from books.models import Book
-from .serializers import BookSerializer
+from books.models import Book, Challenge
+from .serializers import BookSerializer, ChallengeSerializer
 
 
 class IndexViewSet(viewsets.ModelViewSet):
@@ -14,3 +14,8 @@ class IndexViewSet(viewsets.ModelViewSet):
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
+
+
+class ChallengeViewSet(viewsets.ModelViewSet):
+    queryset = Challenge.objects.all()
+    serializer_class = ChallengeSerializer

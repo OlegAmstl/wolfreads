@@ -2,10 +2,11 @@ from django.contrib.auth.views import (LoginView, LogoutView,
                                        PasswordResetCompleteView,
                                        PasswordResetConfirmView,
                                        PasswordResetDoneView,
-                                       PasswordResetView)
+                                       PasswordResetView,
+                                       )
 from django.urls import path
 
-from .views import SignUp, profile
+from .views import SignUp, profile, add_avatar
 
 app_name = 'users'
 
@@ -32,5 +33,6 @@ urlpatterns = [
 
 
     path('profile/<str:username>/', profile,
-         name='user_profile')
+         name='user_profile'),
+    path('avatar/', add_avatar, name='avatar')
 ]

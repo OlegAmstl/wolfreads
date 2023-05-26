@@ -1,5 +1,8 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
+from django import forms
+
+from .models import Avatar
 
 User = get_user_model()
 
@@ -17,3 +20,13 @@ class CreateUserForm(UserCreationForm):
             'username',
             'email'
         ]
+
+
+class AvatarForm(forms.ModelForm):
+    """
+    Форма загрузки аватарки.
+    """
+
+    class Meta:
+        model = Avatar
+        fields = ["avatar", ]

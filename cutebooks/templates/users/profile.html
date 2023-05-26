@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% block title %}{{ user.username }}{% endblock %}
 {% block content %}
-{% load avatar_tags %}
 <div class="container">
     <div class="profile-header">
         <div class="profile-avatar">
-            <div>{% avatar user 350 350 class="img-circle img-responsive" %}</div>
-            <a class="change-avatar btn btn-info" href="{% url 'avatar_change' %}">Сменить аватар</a>
+            {% if avatar != False %}
+            <img src="{{ avatar.avatar.url }}" alt="Avatar">
+            {% else %}
+            <a href="{% url 'users:avatar' %}">Загрузить аватар</a>
+            {% endif %}
         </div>
         <div class="profile-info">
             <h1>{{ user.username }}</h1>

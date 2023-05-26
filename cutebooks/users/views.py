@@ -2,13 +2,14 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, edit
 
 from books.models import Challenge, RatingBook
 
-from .forms import CreateUserForm
+from .forms import CreateUserForm, AvatarForm
+from .models import Avatar
 
 User = get_user_model()
 
@@ -44,6 +45,11 @@ def profile(request, username):
         challenge = False
         challenge_in_percent = None
 
+    if Avatar.objects.filter(user=user).exists():
+        avatar = Avatar.objects.get(user=user)
+    else:
+        avatar = False
+
     paginator = Paginator(read_books, settings.NUM_BOOKS)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
@@ -54,6 +60,38 @@ def profile(request, username):
         'read_books_all': read_books_all,
         'challenge': challenge,
         'challenge_percent': challenge_in_percent,
-        'page_obj': page_obj
+        'page_obj': page_obj,
+        'avatar': avatar
     }
     return render(request, template, context=context)
+
+
+# class AvatarView(edit.CreateView):
+#     """
+#     Создание аватара.
+#     """
+#
+#     model = Avatar
+#     fields = ["avatar", ]
+#     success_url = reverse_lazy("users:user_profile")
+
+
+def add_avatar(request):
+    """
+    Создание аватара.
+    :param request:
+    :return:
+    """
+    template = 'users/add_avatar.html'
+    form = AvatarForm(request.POST or None,
+                      files=request.FILES or None)
+    if form.is_valid():
+        avatar = form.save(commit=False)
+        avatar.user = request.user
+        form.save()
+        return redirect('users:user_profile', request.user)
+    else:
+        context = {
+            'form': form
+        }
+        return render(request, template, context=context)
