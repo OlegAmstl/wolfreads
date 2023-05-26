@@ -5,10 +5,10 @@
     <div class="profile-header">
         <div class="profile-avatar">
             {% if avatar != False %}
-            <img src="{{ avatar.avatar.url }}" alt="Avatar">
-            {% else %}
-            <a href="{% url 'users:avatar' %}">Загрузить аватар</a>
+            <img src="{{ avatar.avatar.url }}" class="img-fluid border border-info rounded-5 mb-3" alt="Avatar">
+
             {% endif %}
+            <p><a class="btn btn-primary" href="{% url 'users:avatar' %}">Загрузить аватар</a></p>
         </div>
         <div class="profile-info">
             <h1>{{ user.username }}</h1>

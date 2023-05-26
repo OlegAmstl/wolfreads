@@ -78,6 +78,7 @@
 }
 
 .profile-avatar {
+    max-width: 450px;
     margin-right: 40px;
 }
 

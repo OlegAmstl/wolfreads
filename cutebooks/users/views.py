@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, edit
+from django.views.generic import CreateView
 
 from books.models import Challenge, RatingBook
 
@@ -66,16 +66,6 @@ def profile(request, username):
     return render(request, template, context=context)
 
 
-# class AvatarView(edit.CreateView):
-#     """
-#     Создание аватара.
-#     """
-#
-#     model = Avatar
-#     fields = ["avatar", ]
-#     success_url = reverse_lazy("users:user_profile")
-
-
 def add_avatar(request):
     """
     Создание аватара.
@@ -83,6 +73,10 @@ def add_avatar(request):
     :return:
     """
     template = 'users/add_avatar.html'
+    if Avatar.objects.filter(user=request.user).exists():
+        avatar = Avatar.objects.get(user=request.user)
+        avatar.avatar.delete(save=True)
+        avatar.delete()
     form = AvatarForm(request.POST or None,
                       files=request.FILES or None)
     if form.is_valid():

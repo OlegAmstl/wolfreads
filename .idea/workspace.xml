@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="В приложении api создан BookViewSet и роутер к нему.">
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/users/add_avatar.html" afterDir="false" />
+    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="Сделал кастомное добавление аватара.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/cutebooks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/cutebooks/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutebooks/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/users/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutebooks/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685072935015</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Сделал кастомное добавление аватара.">
+      <created>1685092207757</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1685092207757</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,6 +228,7 @@
     <MESSAGE value="Создал новое приложение api и установил DRF." />
     <MESSAGE value="Через api получаем главную страницу с 4 последними добавленными в приложение книгами. Добавлены IndexViewSet, BookSerializer, а также сделан роутинг для главной страницы." />
     <MESSAGE value="В приложении api создан BookViewSet и роутер к нему." />
-    <option name="LAST_COMMIT_MESSAGE" value="В приложении api создан BookViewSet и роутер к нему." />
+    <MESSAGE value="Сделал кастомное добавление аватара." />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал кастомное добавление аватара." />
   </component>
 </project>
