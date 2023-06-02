@@ -9,8 +9,6 @@ urlpatterns = [
     path('', include('books.urls', namespace='books')),
     path('auth/', include('django.contrib.auth.urls')),
     path('api/', include('api.urls')),
-    path('auth/', include('djoser.urls')),
-    path('auth/', include('djoser.urls.jwt')),
 ]
 
 if settings.DEBUG:

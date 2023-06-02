@@ -38,4 +38,14 @@ python3 manage.py createsuperuser
 python3 manage.py runserver
 ```
 
+## API Cutebooks
+### Эндпоинты:
+#### Аутонтификация:
+- [POST] /api/v1/auth/users/ - регистрация пользователя
+- [POST] /api/v1/auth/users/me/ - изменение своих данных
+- [POST] /api/v1/auth/jwt/create/ - получение токена
+
+#### Взаимодействие с приложением:
+- [GET] /api/v1/main/ - главная страница 
+- [GET] /api/v1/books/ - список всех книг в приложении
 #### Автор Маркин Олег

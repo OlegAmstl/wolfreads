@@ -17,5 +17,13 @@ class BookViewSet(viewsets.ModelViewSet):
 
 
 class ChallengeViewSet(viewsets.ModelViewSet):
-    queryset = Challenge.objects.all()
     serializer_class = ChallengeSerializer
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+    def get_queryset(self):
+        user = self.request.user
+        return Challenge.objects.filter(user=user)
+
+

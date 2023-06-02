@@ -9,5 +9,7 @@ router_v1.register('books', BookViewSet, basename='books')
 router_v1.register('challenge', ChallengeViewSet, basename='challenge')
 
 urlpatterns = [
-    path('v1/', include(router_v1.urls))
+    path('v1/', include(router_v1.urls)),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.jwt')),
 ]

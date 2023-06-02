@@ -87,6 +87,7 @@ class BookSerializer(serializers.ModelSerializer):
     """
     Сериализатор модели книги.
     """
+
     class Meta:
         model = Book
         fields = '__all__'
@@ -96,6 +97,8 @@ class ChallengeSerializer(serializers.ModelSerializer):
     """
     Сериализатор модели челленджа
     """
+
     class Meta:
         model = Challenge
         fields = '__all__'
+        read_only_fields = ['user', ]
