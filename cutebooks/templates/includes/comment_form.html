@@ -1,0 +1,6 @@
+<h2>Добавить новый комментарий</h2>
+<form action="{% url 'books:book_comment' book.id %}" method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <p><input class="btn btn-info" type="submit" value="Добавить комментарий"></p>
+</form>

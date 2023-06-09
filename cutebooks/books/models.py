@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
+from django.urls import reverse
 
 User = get_user_model()
 
@@ -72,12 +73,15 @@ class Book(models.Model):
         blank=True
     )
 
-    def __str__(self):
-        return self.title
-
     class Meta:
         verbose_name = 'Книга'
         verbose_name_plural = 'Книги'
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('books:book_detail', args=[self.id, ])
 
 
 class Challenge(models.Model):
@@ -113,3 +117,29 @@ class RatingBook(models.Model):
         validators=[MaxValueValidator(5), MinValueValidator(1)]
     )
     date_read = models.DateField(auto_now_add=True)
+
+
+class Comment(models.Model):
+    '''
+    Модель комментария к посту.
+    '''
+
+    book = models.ForeignKey(Book,
+                             on_delete=models.CASCADE,
+                             related_name='comments')
+    author = models.ForeignKey(User,
+                               on_delete=models.CASCADE,
+                               related_name='comments')
+    body = models.TextField(verbose_name='')
+    created = models.DateTimeField(auto_now_add=True)
+    update = models.DateTimeField(auto_now=True)
+    active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ['created', ]
+        indexes = [
+            models.Index(fields=['created']),
+        ]
+
+    def __str__(self):
+        return f'Комментарий от {self.author.username} на {self.book.title}'

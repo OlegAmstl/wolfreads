@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Book, Challenge, RatingBook
+from .models import Book, Challenge, RatingBook, Comment
 
 
 class BookForm(forms.ModelForm):
@@ -42,4 +42,17 @@ class BookSearchForm(forms.Form):
 
     def __int__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['book_title'].widget.attrs.update({'class': 'form-control'})
+        self.fields['book_title'].widget.attrs.update(
+            {'class': 'form-control'})
+
+
+class CommentForm(forms.ModelForm):
+    '''
+    Форма написания комментария.
+    '''
+
+    class Meta:
+        model = Comment
+        fields = ['body', ]
+
+

@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title"><a href="{% url 'books:book_detail' book.pk %}">{{ book.book.title|truncatechars:40 }}</a></h5>
+                    <h5 class="card-title"><a href="{{ book.book.get_absolute_url }}">{{ book.book.title|truncatechars:40 }}</a></h5>
                     <p class="card-text">{{ book.book.description|truncatechars:100 }}</p>
                     <p class="card-text"><small class="text-body-secondary">Оценка: {{ book.score }} из 5</small></p>
                     <p class="card-text"><small class="text-body-secondary">Прочитана {{ book.date_read }}</small></p>

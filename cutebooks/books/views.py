@@ -5,9 +5,10 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
-from django.views.generic import DetailView, ListView, edit
+from django.views.generic import ListView, edit
+from django.views.decorators.http import require_POST
 
-from .forms import BookSearchForm, ChallengeForm, RatingForm
+from .forms import BookSearchForm, ChallengeForm, RatingForm, CommentForm
 from .models import Book
 
 
@@ -48,13 +49,43 @@ class BookListView(ListView):
     paginate_by = settings.NUM_BOOKS
 
 
-class BookDetailView(DetailView):
-    """
-    Отображает информацию по выбранной книге.
-    """
+@require_POST
+def book_comment(request, book_id):
+    '''
+    Представление комментария в посте.
+    :param request:
+    :param book_id:
+    :return:
+    '''
+    template = 'books/comment.html'
+    book = get_object_or_404(Book,
+                             id=book_id)
+    comment = None
+    form = CommentForm(data=request.POST)
+    if form.is_valid():
+        comment = form.save(commit=False)
+        comment.book = book
+        comment.author = request.user
+        comment.save()
+    context = {
+        'book': book,
+        'form': form,
+        'comment': comment
+    }
+    return render(request, template, context=context)
 
-    model = Book
 
+def book_detail(request, book_id):
+    template = 'books/book_detail.html'
+    book = get_object_or_404(Book, id=book_id)
+    comments = book.comments.filter(active=True)
+    form = CommentForm()
+    context = {
+        'book': book,
+        'comments': comments,
+        'form': form
+    }
+    return render(request, template, context=context)
 
 @login_required
 def favorite_add(request, id):

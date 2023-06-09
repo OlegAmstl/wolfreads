@@ -6,7 +6,7 @@
     <div class="card read-book-card" style="width: 18rem;">
       <img src="{{ book.cover.url }}">
       <div class="card-body">
-        <h5 class="card-title"><a href="{% url 'books:book_detail' book.pk %}">{{ book.title }}</a></h5>
+        <h5 class="card-title"><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h5>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><a href="{% url 'books:favorite_delete' book.id %}" class="btn btn-primary custom-btn">Удалить</a></li>

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Book, Challenge, Genre
+from .models import Book, Challenge, Genre, Comment
 
 
 @admin.register(Book)
@@ -43,3 +43,14 @@ class ChallengeAdmin(admin.ModelAdmin):
         'num_books',
         'user'
     ]
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    '''
+    Регистрация модели Comment для панели администратора.
+    '''
+
+    list_display = ['author', 'body', 'created', 'active']
+    list_filter = ['active', 'author', 'created', 'update']
+    search_fields = ['body', 'author']

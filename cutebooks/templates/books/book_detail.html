@@ -18,5 +18,26 @@
     <p><strong>Описание: </strong>{{ book.description }}</p>
     </div>
   </div>
+  <div class="mt-5">
+    {% with comments.count as total_comments %}
+        <h3>
+            Всего комментариев: {{ total_comments }}
+        </h3>
+    {% endwith %}
+    {% for comment in comments %}
+        <div class="comment">
+            <p class="info">
+                {{ comment.author.username }}
+                {{ comment.created }}
+            </p>
+            {{ comment.body|linebreaks }}
+        </div>
+    {% empty %}
+        <p>Здесь нет комментариев.</p>
+    {% endfor %}
+    {% if user.is_authenticated %}
+      {% include "includes/comment_form.html" %}
+    {% endif %}
+  </div>
 </div>
 {% endblock %}
