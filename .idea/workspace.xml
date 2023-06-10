@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="API для челленджа.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="Добавлена возможность оставлять комментарии к книгам.">
+      <change afterPath="$PROJECT_DIR$/cutebooks/books/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cutebooks/books/templatetags/book_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cutebooks/templates/books/latest_books.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/books/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/books/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,17 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/amstl/Dev/KivyProject",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/amstl/Dev/KivyProject&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cutebooks/templates/books" />
@@ -224,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685693083058</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Добавлена возможность оставлять комментарии к книгам.">
+      <created>1686295647700</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1686295647700</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,6 +283,7 @@
     <MESSAGE value="Сделала JWT-аутентификацию для api." />
     <MESSAGE value="Написан сериализаторы для создания пользователя и изменения пароля." />
     <MESSAGE value="API для челленджа." />
-    <option name="LAST_COMMIT_MESSAGE" value="API для челленджа." />
+    <MESSAGE value="Добавлена возможность оставлять комментарии к книгам." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена возможность оставлять комментарии к книгам." />
   </component>
 </project>

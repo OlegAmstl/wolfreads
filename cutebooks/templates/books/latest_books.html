@@ -1,0 +1,13 @@
+<div class="new_books mb-5">
+{% for book in latest_books %}
+  <div class="card card-custom" style="width: 18rem;">
+      <img src="{{ book.cover.url }}">
+      <div class="card-body">
+        <h5 class="card-title"><a href="{{ book.get_absolute_url }}">{{ book.title|truncatechars:40 }}</a></h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Жанр: {{ book.genre }}</li>
+      </ul>
+    </div>
+{% endfor %}
+</div>

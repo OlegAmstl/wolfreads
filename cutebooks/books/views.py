@@ -16,11 +16,7 @@ def index(request):
     """
     На главной странице отображаются последние добавленные на сайт 4 книги.
     """
-    books = Book.objects.order_by('-add_date')[:4]
-    context = {
-        'books': books,
-    }
-    return render(request, 'books/index.html', context=context)
+    return render(request, 'books/index.html')
 
 
 class BookCreate(edit.CreateView):
