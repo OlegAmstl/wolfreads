@@ -5,10 +5,10 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, edit
 from django.views.decorators.http import require_POST
+from django.views.generic import ListView, edit
 
-from .forms import BookSearchForm, ChallengeForm, RatingForm, CommentForm
+from .forms import BookSearchForm, ChallengeForm, CommentForm, RatingForm
 from .models import Book
 
 

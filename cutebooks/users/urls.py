@@ -2,11 +2,10 @@ from django.contrib.auth.views import (LoginView, LogoutView,
                                        PasswordResetCompleteView,
                                        PasswordResetConfirmView,
                                        PasswordResetDoneView,
-                                       PasswordResetView,
-                                       )
+                                       PasswordResetView)
 from django.urls import path
 
-from .views import SignUp, profile, add_avatar
+from .views import SignUp, add_avatar, profile
 
 app_name = 'users'
 

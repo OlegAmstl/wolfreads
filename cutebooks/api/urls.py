@@ -1,7 +1,7 @@
-from django.urls import path, include
+from django.urls import include, path
 from rest_framework import routers
-from .views import IndexViewSet, BookViewSet, ChallengeViewSet
 
+from .views import BookViewSet, ChallengeViewSet, IndexViewSet
 
 router_v1 = routers.DefaultRouter()
 router_v1.register('main', IndexViewSet, basename='index')

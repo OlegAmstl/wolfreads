@@ -2,13 +2,13 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 
 from books.models import Challenge, RatingBook
 
-from .forms import CreateUserForm, AvatarForm
+from .forms import AvatarForm, CreateUserForm
 from .models import Avatar
 
 User = get_user_model()

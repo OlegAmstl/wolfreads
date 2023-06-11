@@ -1,7 +1,8 @@
-from rest_framework import serializers
+from re import match
+
 from django.contrib.auth import get_user_model, password_validation
 from django.core import exceptions
-from re import match
+from rest_framework import serializers
 
 from books.models import Book, Challenge
 

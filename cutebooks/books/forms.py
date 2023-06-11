@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Book, Challenge, RatingBook, Comment
+from .models import Book, Challenge, Comment, RatingBook
 
 
 class BookForm(forms.ModelForm):

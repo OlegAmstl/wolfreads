@@ -7,3 +7,4 @@ todo.md
 db.sqlite3
 workspace.xml
 .env
+migrations/
