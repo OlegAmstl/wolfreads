@@ -38,7 +38,7 @@ python3 manage.py createsuperuser
 python3 manage.py runserver
 ```
 
-## API Cutebooks
+## API Cutebooks (находится в стадии разработки)
 ### Эндпоинты:
 #### Аутонтификация:
 - [POST] /api/v1/auth/users/ - регистрация пользователя
