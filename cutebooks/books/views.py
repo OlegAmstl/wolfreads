@@ -47,12 +47,9 @@ class BookListView(ListView):
 
 @require_POST
 def book_comment(request, book_id):
-    '''
+    """
     Представление комментария в посте.
-    :param request:
-    :param book_id:
-    :return:
-    '''
+    """
     template = 'books/comment.html'
     book = get_object_or_404(Book,
                              id=book_id)

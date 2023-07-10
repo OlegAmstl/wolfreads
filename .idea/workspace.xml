@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="Добавлен шаблонный тег, который выводит на главную страницу последние добавленные книги в приложение." />
+    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="readme">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/amstl/Dev/python_blog",
+    "last_opened_file_path": "/home/amstl/Dev/Social_Network",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
@@ -236,7 +239,35 @@
       <option name="project" value="LOCAL" />
       <updated>1686367162116</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="isort">
+      <created>1686468357445</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1686468357445</updated>
+    </task>
+    <task id="LOCAL-00028" summary="readme">
+      <created>1686468486236</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1686468486236</updated>
+    </task>
+    <task id="LOCAL-00029" summary="readme">
+      <created>1686468814644</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1686468814644</updated>
+    </task>
+    <task id="LOCAL-00030" summary="readme">
+      <created>1686468916305</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1686468916305</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,6 +317,8 @@
     <MESSAGE value="API для челленджа." />
     <MESSAGE value="Добавлена возможность оставлять комментарии к книгам." />
     <MESSAGE value="Добавлен шаблонный тег, который выводит на главную страницу последние добавленные книги в приложение." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен шаблонный тег, который выводит на главную страницу последние добавленные книги в приложение." />
+    <MESSAGE value="isort" />
+    <MESSAGE value="readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme" />
   </component>
 </project>
