@@ -5,7 +5,8 @@ from django.contrib.auth.views import (LoginView, LogoutView,
                                        PasswordResetView)
 from django.urls import path
 
-from .views import SignUp, add_avatar, profile
+from .views import (SignUp, add_avatar, profile, user_list,
+                    user_follow, user_unfollow)
 
 app_name = 'users'
 
@@ -33,5 +34,8 @@ urlpatterns = [
 
     path('profile/<str:username>/', profile,
          name='user_profile'),
-    path('avatar/', add_avatar, name='avatar')
+    path('avatar/', add_avatar, name='avatar'),
+    path('user_list/', user_list, name='user_list'),
+    path('users/<username>/follow/', user_follow, name='user_follow'),
+    path('users/<username>/unfollow/', user_unfollow, name='user_unfollow')
 ]

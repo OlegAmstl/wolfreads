@@ -2,14 +2,14 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 
 from books.models import Challenge, RatingBook
 
 from .forms import AvatarForm, CreateUserForm
-from .models import Avatar
+from .models import Avatar, Contact
 
 User = get_user_model()
 
@@ -28,15 +28,18 @@ class SignUp(CreateView):
 def profile(request, username):
     """
     Отображение персональной страницы пользователя.
-    :param request:
-    :param username:
-    :return:
     """
     template = 'users/profile.html'
-    user = request.user
+    # user = request.user
+    user = get_object_or_404(User, username=username)
     read_books = RatingBook.objects.filter(user=user)
     read_books_all = RatingBook.objects.filter(user=user).count()
     read_books_of_year = read_books.filter(date_read__year='2023').count()
+    following = False
+
+    if request.user.is_authenticated:
+        if Contact.objects.filter(user_from=request.user, user_to=user).exists():
+            following = True
 
     if Challenge.objects.filter(user=user).exists():
         challenge = Challenge.objects.get(user=user)
@@ -61,7 +64,8 @@ def profile(request, username):
         'challenge': challenge,
         'challenge_percent': challenge_in_percent,
         'page_obj': page_obj,
-        'avatar': avatar
+        'avatar': avatar,
+        'following': following
     }
     return render(request, template, context=context)
 
@@ -69,8 +73,6 @@ def profile(request, username):
 def add_avatar(request):
     """
     Создание аватара.
-    :param request:
-    :return:
     """
     template = 'users/add_avatar.html'
     if Avatar.objects.filter(user=request.user).exists():
@@ -89,3 +91,37 @@ def add_avatar(request):
             'form': form
         }
         return render(request, template, context=context)
+
+
+@login_required
+def user_list(request):
+    """
+    Представление списка пользователей.
+    """
+    template = 'users/user_list.html'
+    users = User.objects.all()
+    context = {'users': users}
+    return render(request, template, context=context)
+
+
+@login_required
+def user_follow(request, username):
+    """
+    Подписка на пользователя.
+    """
+    user = get_object_or_404(User, username=username)
+    if user != request.user:
+        Contact.objects.get_or_create(user_from=request.user,
+                                      user_to=user)
+    return redirect('users:user_profile', username)
+
+
+@login_required
+def user_unfollow(request, username):
+    """
+    Отписка от пользователя.
+    """
+    user = get_object_or_404(User, username=username)
+    follow = get_object_or_404(Contact, user_to=user)
+    follow.delete()
+    return redirect('users:user_profile', username)

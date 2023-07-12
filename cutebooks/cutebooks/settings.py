@@ -2,6 +2,7 @@ import os
 from datetime import timedelta
 from pathlib import Path
 
+from django.urls import reverse_lazy
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -19,13 +20,11 @@ NUM_BOOKS = 15
 # Замена стандартоного шаблона модуля django-avatar
 AVATAR_CHANGE_TEMPLATE = 'users/ava_change.html'
 
-
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -75,7 +74,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'cutebooks.wsgi.application'
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -109,7 +107,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
@@ -118,10 +115,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -144,9 +139,13 @@ REST_FRAMEWORK = {
     ],
 }
 
-
 SIMPLE_JWT = {
     # Устанавливаем срок жизни токена
-   'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
-   'AUTH_HEADER_TYPES': ('Bearer',),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'AUTH_HEADER_TYPES': ('Bearer',),
+}
+
+ABSOLUTE_URL_OVERRIDES = {
+    'auth.user': lambda u: reverse_lazy('user_detail',
+                                        args=[u.username])
 }
