@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="fix">
-      <change afterPath="$PROJECT_DIR$/cutebooks/templates/users/user_list.html" afterDir="false" />
+    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="Добалена возможность подписываться на пользователей.">
+      <change afterPath="$PROJECT_DIR$/cutebooks/actions/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cutebooks/templates/actions/action_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cutebooks/templates/actions/action_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/cutebooks/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutebooks/templates/includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/includes/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutebooks/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +52,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cutebooks/templates/actions" />
       <recent name="$PROJECT_DIR$/cutebooks/templates/books" />
     </key>
   </component>
@@ -282,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688956600400</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Добалена возможность подписываться на пользователей.">
+      <option name="closed" value="true" />
+      <created>1689131386523</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1689131386523</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,7 +318,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="page all authors" />
     <MESSAGE value="Fix bug with date of birth and date of death. Display of books added for reading. Display all authors on the site." />
     <MESSAGE value="Added author's page" />
     <MESSAGE value="Fixed bugs" />
@@ -334,6 +342,7 @@
     <MESSAGE value="isort" />
     <MESSAGE value="readme" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="Добалена возможность подписываться на пользователей." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добалена возможность подписываться на пользователей." />
   </component>
 </project>

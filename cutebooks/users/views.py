@@ -10,6 +10,7 @@ from books.models import Challenge, RatingBook
 
 from .forms import AvatarForm, CreateUserForm
 from .models import Avatar, Contact
+from actions.utils import create_action
 
 User = get_user_model()
 
@@ -113,6 +114,7 @@ def user_follow(request, username):
     if user != request.user:
         Contact.objects.get_or_create(user_from=request.user,
                                       user_to=user)
+        create_action(request.user, 'подписался на', user)
     return redirect('users:user_profile', username)
 
 

@@ -1,0 +1,31 @@
+
+{% with user=action.user %}
+<div class="action">
+  <div>
+    {% if action.target %}
+      {% with target=action.target %}
+        {% if target.book %}
+          <a href="{{ target.get_absolute_url }}">
+            <img src="{{ target.book.cover.url }}">
+          </a>
+        {% endif %}
+      {% endwith %}
+    {% endif %}
+  </div>
+  <div class="info">
+    <p>
+      <span class="date">{{ action.created|timesince }} назад</span>
+      <br />
+      <a href="#">
+        {{ user.username }}
+      </a>
+      {{ action.verb }}
+      {% if action.target %}
+        {% with target=action.target %}
+          <a href="#">{{ target }}</a>
+        {% endwith %}
+      {% endif %}
+    </p>
+  </div>
+</div>
+{% endwith %}

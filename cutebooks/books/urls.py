@@ -3,7 +3,7 @@ from django.urls import path, re_path
 from .views import (BookCreate, BookListView, BookSearchView, add_read,
                     book_comment, book_detail, challenge_create,
                     delete_book_from_favorites, favorite_add, favorites_list,
-                    index, rating_book)
+                    index, rating_book, action_list)
 
 app_name = 'books'
 
@@ -20,5 +20,6 @@ urlpatterns = [
     path('challenge/create/', challenge_create, name='challenge_create'),
     path('rating/<int:id>/', rating_book, name='rating_book'),
     path('books/search/', BookSearchView.as_view(), name='book_search'),
-    path('book/<int:book_id>/comment/', book_comment, name='book_comment')
+    path('book/<int:book_id>/comment/', book_comment, name='book_comment'),
+    path('book/actions/', action_list, name='action_list')
 ]
