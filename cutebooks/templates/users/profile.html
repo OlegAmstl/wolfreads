@@ -20,9 +20,11 @@
                  href="{% url 'users:user_unfollow' user.username %}"
                  role="button">Отписаться</a>
             {% else %}
-              <a class="btn btn-lg btn-primary"
-                 href="{% url 'users:user_follow' user.username %}"
-                 role="button">Подписаться</a>
+                {% if user != request.user %}
+                  <a class="btn btn-lg btn-primary"
+                     href="{% url 'users:user_follow' user.username %}"
+                     role="button">Подписаться</a>
+                {% endif %}
             {% endif %}
 
             <p class="profile-info-allread">Прочитанных книг: {{ read_books_all }}</p>

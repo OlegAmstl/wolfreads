@@ -132,7 +132,6 @@ def add_read(request, id):
         book.read_user.add(request.user)
         book.date_read = datetime.now()
         book.save()
-        create_action(request.user, 'прочитал', book)
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
 
