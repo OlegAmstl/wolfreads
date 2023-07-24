@@ -33,7 +33,7 @@ def profile(request, username):
     template = 'users/profile.html'
     # user = request.user
     user = get_object_or_404(User, username=username)
-    read_books = RatingBook.objects.filter(user=user)
+    read_books = RatingBook.objects.filter(user=user).order_by('-date_read')
     read_books_all = RatingBook.objects.filter(user=user).count()
     read_books_of_year = read_books.filter(date_read__year='2023').count()
     following = False
