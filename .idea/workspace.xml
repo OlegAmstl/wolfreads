@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="Добалена лента активности подписок.">
+    <list default="true" id="90b853e3-5ed4-4552-a1ba-d74e19addafc" name="Changes" comment="Стилизовано окно входа">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/books/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/templates/actions/action_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/actions/action_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cutebooks/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/static/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutebooks/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/cutebooks/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,17 +33,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/amstl/Dev/Social_Network&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/amstl/Dev/TDD",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cutebooks/templates/actions" />
@@ -294,7 +293,31 @@
       <option name="project" value="LOCAL" />
       <updated>1689227086237</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Иссправление багов в ленте.">
+      <option name="closed" value="true" />
+      <created>1689318454061</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1689318454061</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Порядок прочитанных книг - последняя прочитанная книга вверху списка">
+      <option name="closed" value="true" />
+      <created>1690193648797</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1690193648797</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Стилизовано окно входа">
+      <option name="closed" value="true" />
+      <created>1690196301022</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1690196301022</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -321,9 +344,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added author's page" />
-    <MESSAGE value="Fixed bugs" />
-    <MESSAGE value="Create avatars" />
     <MESSAGE value="Create challenges" />
     <MESSAGE value="design main page" />
     <MESSAGE value="add rating book" />
@@ -346,6 +366,9 @@
     <MESSAGE value="fix" />
     <MESSAGE value="Добалена возможность подписываться на пользователей." />
     <MESSAGE value="Добалена лента активности подписок." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добалена лента активности подписок." />
+    <MESSAGE value="Иссправление багов в ленте." />
+    <MESSAGE value="Порядок прочитанных книг - последняя прочитанная книга вверху списка" />
+    <MESSAGE value="Стилизовано окно входа" />
+    <option name="LAST_COMMIT_MESSAGE" value="Стилизовано окно входа" />
   </component>
 </project>
